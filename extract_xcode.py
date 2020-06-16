@@ -33,14 +33,14 @@ class io_wrapper(object):
             self.fh = open(self.filename, self.mode)
         return self
     def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.filename is not '-':
+        if self.filename != '-':
             self.fh.close()
     def write(self, bytes):
-        if self.filename is not '-':
+        if self.filename != '-':
             return self.fh.write(bytes)
         return self.fh.buffer.write(bytes)
     def read(self, size):
-        if self.filename is not '-':
+        if self.filename != '-':
             return self.fh.read(size)
         return self.fh.buffer.read(size)
     def seek(self, size):
