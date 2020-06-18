@@ -11,7 +11,6 @@ import sys
 import struct
 import zlib
 import xml.etree.ElementTree as ET
-import bz2
 import lzma
 
 XAR_MAGIC = b'\x78\x61\x72\x21'
